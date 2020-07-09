@@ -66,13 +66,41 @@ export const ProfileInfo = styled.div`
 `;
 
 export const BottomManu = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
 
+  background: var(--primary);
+  width: 100%;
+  border-top: solid 1px var(--outline);
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 8px min(46px, max(10vw, 10px));
+
+  /**Quando a largura dele bater em 500px o display dele vai ser none, ou seja vai sumir */
+  @media (min-width: 500px) {
+    /*BlackPoint*/
+    display: none;
+  }
 `;
 
 // Estamos colocar um css para todos os icons juntos.
 const iconCss = css`
   width: 31px;
   height: 31px;
+
+  cursor: pointer;
+
+  fill: var(--gray);
+
+  &:hover,
+  &.active {
+    fill: var(--twitter);
+  }
+  /*Quando estiver com o mouse em cima, ou ativo o icon vai ficar com a cor do icon.*/
 `;
 
 export const HomeIcon = styled(Home)`
