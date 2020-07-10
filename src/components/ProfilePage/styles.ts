@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 import { LocationOn, Cake } from '../../styles/icons';
 
-import avatar from '../../assets/avatar.jpg';
+import AvatarImage from '../AvatarImage';
 import banner from '../../assets/banner.jpg';
 
 import Button from '../Button';
@@ -35,18 +35,13 @@ export const Banner = styled.div`
   position: relative;
 `;
 
-export const Avatar = styled.div`
+export const Avatar = styled(AvatarImage)`
   /**Formulá para deixar a imagem responsiva */
   width: max(45px, min(135px, 22vw));
   height: max(45px, min(135px, 22vw));
   /**Vai ser um minimo de 45 de largura, e o max de 135px baseado em 22vw */
 
-  border-radius: 50%;
   border: 3.75px solid var(--primary);
-
-  background: url(${avatar}), no-repeat;
-  background-size: cover;
-  background-position: center;
 
   position: absolute;
   bottom: max(-60px, -10vw);

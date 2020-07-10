@@ -39,7 +39,7 @@ export default createGlobalStyle`
     --retweet: #00C06B;
     --like: #E8265E;
     --twitter: #33A1F2;
-    --twitter-white-hover: #edf8ff;
+    --twitter-white-hover: #e1f2fc;
     --twitter-light-hover: #2C8ED6;
   }
 `;
