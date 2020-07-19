@@ -30,22 +30,21 @@
   - **#React JS**
   - **#React Sticky Box**
 
-## Usage
-  #### how to use the backend server and the frontend
+## :scroll: Usage
 
-    1. Copy and paste this command into your terminal:
+  1. Copy and paste this command into your terminal:
+
+    $ git clone https://github.com/alexandredev3/twitter-clone.git
+
+  2. Next type this command to start ReactJS
+
+    $ yarn start
+
+  3. Now go to http://localhost:3000/
+
+  Have a good time! 😃
     
-      $ git clone https://github.com/alexandredev3/twitter-clone.git
-
-    2. Next type this command to start ReactJS
-    
-      $ yarn start
-
-    3. Now go to http://localhost:3000/
-
-    Have a good time! 😃
-    
-## Author 
+## :bust_in_silhouette: Author 
 
 👤 **Alexandre Costa**
 
