@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img width="400px" src="https://github.com/alexandredev3/twitter-clone/blob/master/logo%20twitter.png" />
+  <img width="200px" src="https://github.com/alexandredev3/twitter-clone/blob/master/logo%20twitter.png" />
 </h1>
 <h3 align="center">Clone da interface do Twitter responsivo.</h3>
 
