@@ -18,12 +18,33 @@ import {
   LikeIcon
 } from './styles';
 
-const Tweet: React.FC = () => {
+interface Props {
+  data: {
+    id: number;
+    retweeted: boolean;
+    infos: {
+      name: string;
+      nickname: string;
+      time: string;
+      description: string;
+      image: string;
+      comment: number;
+      retweets: number;
+      likes: number;
+    }
+  }
+}
+
+const Tweet: React.FC<Props> = ({ data }) => {
   return (
     <Container>
       <Retweeted>
-        <RetweetMessage />
-        Você retweetou
+        {data.retweeted && (
+          <>
+          <RetweetMessage />
+          <p>Você retweetou</p>
+          </>
+        )}
       </Retweeted>
 
       <Body>
@@ -31,28 +52,28 @@ const Tweet: React.FC = () => {
 
         <Content>
           <Header>
-            <strong>Alexandre Dev</strong>
-            <span>@alexandredevv</span>
+            <strong>{data.infos.name}</strong>
+            <span>{data.infos.nickname}</span>
             <Dot />
-            <time>10 de jun</time>
+            <time>{data.infos.time}</time>
           </Header>
 
-          <Description>Clone do Twitter</Description>
+          <Description>{data.infos.description}</Description>
 
-          <ImageContent />
+          <ImageContent image={data.infos.image} />
 
           <Icons>
             <Status>
               <CommentIcon />
-              24
+              {data.infos.comment}
             </Status>
             <Status>
               <RetweetIcon />
-              8
+              {data.infos.retweets}
             </Status>
             <Status>
               <LikeIcon />
-              143
+              {data.infos.likes}
             </Status>
           </Icons>
         </Content>

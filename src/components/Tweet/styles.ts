@@ -1,8 +1,12 @@
 import styled, { css } from 'styled-components';
 
-import AvatarImage from '../AvatarImage';
+import { ProfileAccount } from '../AvatarImage';
 
 import { Chat, Retweet, Favorite } from '../../styles/icons';
+
+interface Props {
+  image: string;
+}
 
 export const Container = styled.div`
   display: flex;
@@ -20,7 +24,9 @@ export const Retweeted = styled.div`
   align-items: center;
 
   font-size: 13px;
-  color: var(--gray);
+  > p {
+    color: var(--gray);
+  }
 `;
 
 
@@ -43,7 +49,7 @@ export const Body = styled.div`
   position: relative;
 `;
 
-export const Avatar = styled(AvatarImage)`
+export const Avatar = styled(ProfileAccount)`
   width: 49px;
   height: 49px;
 
@@ -104,7 +110,7 @@ export const Description = styled.div`
   margin-top: 4px;
 `;
 
-export const ImageContent = styled.div`
+export const ImageContent = styled.div<Props>`
   margin-top: 12px;
   width: 100%;
   height: min(285px, max(175px, 41vw));
@@ -119,8 +125,11 @@ export const ImageContent = styled.div`
     opacity: .7;
   }
 
-  background: var(--gray);
-`;
+  background-image: url(${(props) => props.image});
+  background-size: cover;
+  background-repeat: no-repeat;
+
+` as React.FC<Props>;
 
 export const Icons = styled.div`
   display: flex;

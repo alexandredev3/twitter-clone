@@ -9,7 +9,7 @@ export default styled.button<Props>`
   background: ${(props) => (props.outlined ? 'transparent' : 'var(--twitter)')};
   /*Se for passado outlined no elemento o bg vai ficar transparente se não vai ficar com
   a cor do twitter*/
-  color: ${(props) => (props.outlined ? 'var(--twitter)' : 'var(--white)')};
+  color: ${(props) => (props.outlined ? 'var(--twitter)' : 'var(--primary)')};
   border: ${(props) => (props.outlined ? '1px solid var(--twitter)' : 'none')};
 
   padding: 16px;

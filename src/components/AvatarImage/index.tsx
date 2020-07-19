@@ -1,13 +1,17 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-import avatar from '../../assets/avatar.jpg';
+import Avatar from '../../assets/avatar.jpg';
 
-export default styled.div`
+const ImageCSS = css`
   flex-shrink: 0;
 
   border-radius: 50%;
 
-  background: url(${avatar}), no-repeat;
+  background: url(${Avatar}), no-repeat;
   background-size: cover;
   background-position: center;
+`;
+
+export const ProfileAccount = styled.div`
+ ${ImageCSS}
 `;

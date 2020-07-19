@@ -7,7 +7,6 @@ export default createGlobalStyle`
     box-sizing: border-box;
 
     outline: 0;
-    color: var(--dark);
   }
 
   html, body, #root {
@@ -32,7 +31,7 @@ export default createGlobalStyle`
   :root {
     --primary: #fff;
     --secondary: #15181C;
-    --search: #202327;
+    --search: #ebf2f5;
     --dark: #14171A;
     --gray: #7A7A7A;
     --outline: #d5d9de;
