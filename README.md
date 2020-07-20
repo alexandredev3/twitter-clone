@@ -28,6 +28,7 @@
 ## :books: Technologies
 
   - **#React JS**
+  - **#Styled Components**
   - **#React Sticky Box**
 
 ## :scroll: Usage
